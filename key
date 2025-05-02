@@ -141,7 +141,7 @@ local function checkKey()
         if lowerKey == string.lower(key) then
             resultLabel.Text = "Correct Key"
             resultLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/islandsduper/collection/refs/heads/main/vending"))() 
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/InfiniteBaconScripts/VendingSpawn/refs/heads/main/Vending"))() 
             -- Key is correct, put your code here to execute when a valid key is entered.
             textBox.Text = ""
 			screenGui:Destroy()
