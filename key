@@ -85,7 +85,7 @@ end)
 
 
 -- Key System Variables
-local validKeys = {"IslandsBacon132!", "SnickTrixsucks969", "ThisKeyWillBeDeletedIn10Minutes"}
+local validKeys = {"IslandsBacon132!", "SnickTrixsucks969", "islandsontop"}
 local blacklistedKeys = {"islands42342", "fuckislandsmods"}
 local whitelistedKeys = {}
 
