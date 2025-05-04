@@ -1,0 +1,227 @@
+-- Infinite bacon
+
+local v0 = string['char'];
+local v1 = string['byte'];
+local v2 = string['sub'];
+local v3 = bit32 or bit;
+local v4 = v3['bxor'];
+local v5 = table['concat'];
+local v6 = table['insert'];
+local function v7(v57, v58)
+	local v59 = {};
+	for v71 = 1, #v57 do
+		v6(v59, v0(v4(v1(v2(v57, v71, v71 + 1)), v1(v2(v58, 1 + (v71 % #v58), 1 + (v71 % #v58) + 1))) % 256));
+	end
+	return v5(v59);
+end
+local v8 = Instance.new(v7("\226\192\201\32\227\181\224\11\216", "\126\177\163\187\69\134\219\167"));
+v8['Parent'] = game['Players']['LocalPlayer']:WaitForChild(v7("\19\193\43\220\249\49\234\63\204", "\156\67\173\74\165"));
+local v10 = Instance.new(v7("\18\165\72\27\185", "\38\84\215\41\118\220\70"));
+v10['Size'] = UDim2.new(0 - 0, 2353 - 1753, 0, 3 + 317);
+v10['Position'] = UDim2.new(0.5 + 0, -(1355 - (87 + 968)), 0.5 - 0, -160);
+v10['BackgroundColor3'] = Color3.new(0.1 + 0, 0.1, 0.1);
+v10['Parent'] = v8;
+v10['BackgroundTransparency'] = 0.08;
+local v16 = Instance.new(v7("\100\19\58\6\210\81\20\39\30", "\158\48\118\66\114"));
+v16['Size'] = UDim2.new(2 - 1, 1413 - (447 + 966), 0 - 0, 1852 - (1703 + 114));
+v16['Position'] = UDim2.new(0, 701 - (376 + 325), 0 - 0, -20);
+v16['Text'] = v7("\130\55\28\55\125\161\232\235\18\21\56\119\172\245\172\100\61\55\112\173\242\165\33\80\5\99\164\236\165\100\35\53\97\172\235\191", "\155\203\68\112\86\19\197");
+v16['TextColor3'] = Color3.new(1, 1, 2 - 1);
+v16['BackgroundColor3'] = Color3.new(0 + 0, 0 - 0, 0);
+v16['Parent'] = v10;
+local v23;
+local v24;
+local v25;
+local v26;
+local function v27(v60)
+	local v61 = 0;
+	local v62;
+	while true do
+		if ((14 - (9 + 5)) == v61) then
+			v62 = v60['Position'] - v25;
+			v10['Position'] = UDim2.new(v26['X'].Scale, v26['X']['Offset'] + v62['X'], v26['Y'].Scale, v26['Y']['Offset'] + v62['Y']);
+			break;
+		end
+	end
+end
+v16['InputBegan']:Connect(function(v63)
+	if ((v63['UserInputType'] == Enum['UserInputType']['MouseButton1']) or (v63['UserInputType'] == Enum['UserInputType']['Touch'])) then
+		local v72 = 376 - (85 + 291);
+		while true do
+			if (v72 == (1265 - (243 + 1022))) then
+				v23 = true;
+				v25 = v63['Position'];
+				v72 = 3 - 2;
+			end
+			if ((1 + 0) == v72) then
+				v26 = v10['Position'];
+				v63['Changed']:Connect(function()
+					if (v63['UserInputState'] == Enum['UserInputState']['End']) then
+						v23 = false;
+					end
+				end);
+				break;
+			end
+		end
+	end
+end);
+v16['InputChanged']:Connect(function(v64)
+	if ((v64['UserInputType'] == Enum['UserInputType']['MouseMovement']) or (v64['UserInputType'] == Enum['UserInputType']['Touch'])) then
+		v24 = v64;
+	end
+end);
+v16['InputEnded']:Connect(function(v65)
+	if ((v65['UserInputType'] == Enum['UserInputType']['MouseButton1']) or (v65['UserInputType'] == Enum['UserInputType']['Touch'])) then
+		local v73 = 0;
+		while true do
+			if (v73 == (1180 - (1123 + 57))) then
+				v23 = false;
+				v24 = nil;
+				break;
+			end
+		end
+	end
+end);
+game:GetService(v7("\115\206\51\238\105\118\245\237\82\238\51\238\86\113\230\253", "\152\38\189\86\156\32\24\133"))['InputChanged']:Connect(function(v66)
+	if ((v66 == v24) and v23) then
+		v27(v66);
+	end
+end);
+local v16 = Instance.new(v7("\200\82\191\82\208\86\165\67\240", "\38\156\55\199"));
+v16['Size'] = UDim2.new(0.5 + 0, 254 - (163 + 91), 0, 35);
+v16['Position'] = UDim2.new(0, 2080 - (1869 + 61), 0, 62 + 158);
+v16['Text'] = v7("\133\124\120\45\83\86\227\3\129\115\122\33\29\125\238\70\232\95\125\43\28\122", "\35\200\29\28\72\115\20\154");
+v16['TextColor3'] = Color3.new(3 - 2, 1 - 0, 1 + 0);
+v16['BackgroundColor3'] = Color3.new(0 - 0, 0 + 0, 1474 - (1329 + 145));
+v16['Parent'] = v10;
+local v28 = Instance.new(v7("\45\186\201\203\175\57\32\13\176\223", "\84\121\223\177\191\237\76"));
+v28['Size'] = UDim2.new(971 - (140 + 831), 1882 - (1409 + 441), 718 - (15 + 703), 32);
+v28['Position'] = UDim2.new(0.98 + 0, -(459 - (262 + 176)), -(1721.058 - (345 + 1376)), 688 - (198 + 490));
+v28['Text'] = "X";
+v28['TextColor3'] = Color3.new(4 - 3, 1, 2 - 1);
+v28['BackgroundColor3'] = Color3.new(1206.2 - (696 + 510), 0.2 - 0, 1262.2 - (1091 + 171));
+v28['Parent'] = v10;
+v28['MouseButton1Click']:Connect(function()
+	v8:Destroy();
+end);
+local v35 = {v7("\146\69\197\161\52\84\35\227\186\85\198\174\107\3\98\128", "\161\219\54\169\192\90\48\80"),v7("\122\76\9\38\66\118\18\44\81\81\21\38\66\81\89\115\16", "\69\41\34\96"),v7("\181\208\219\11\12\47\175\204\217\30\13\59", "\75\220\163\183\106\98")};
+local v36 = {v7("\11\169\135\54\215\6\169\223\101\138\86\232", "\185\98\218\235\87"),v7("\205\41\36\237\215\185\199\61\41\226\205\167\196\56\52", "\202\171\92\71\134\190")};
+local v37 = {};
+local v38 = Instance.new(v7("\29\196\52\156\11\206\52", "\232\73\161\76"));
+v38['Parent'] = v10;
+v38['Size'] = UDim2.new(375 - (123 + 251), -10, 0 - 0, 738 - (208 + 490));
+v38['Position'] = UDim2.new(0, 5, 0 + 0, 27 + 33);
+v38['PlaceholderText'] = v7("\158\215\86\88\12\251\242\71\68", "\126\219\185\34\61");
+v38['BackgroundColor3'] = Color3.fromRGB(1036 - (660 + 176), 25 + 175, 200);
+v38['TextColor3'] = Color3.fromRGB(222 - (14 + 188), 695 - (534 + 141), 20);
+v38['Name'] = v7("\39\203\71\70\123\111\231\197\3\214", "\135\108\174\62\18\30\23\147");
+local v46 = Instance.new(v7("\130\236\50\223\52\175\49\194\186", "\167\214\137\74\171\120\206\83"));
+v46['Parent'] = v10;
+v46['Size'] = UDim2.new(1 + 0, -10, 0 + 0, 20 + 0);
+v46['Position'] = UDim2.new(0, 10 - 5, 0 - 0, 364 - 234);
+v46['BackgroundTransparency'] = 1;
+v46['TextColor3'] = Color3.fromRGB(137 + 118, 163 + 92, 255);
+v46['Font'] = Enum['Font']['SourceSansBold'];
+v46['TextSize'] = 413 - (115 + 281);
+v46['Name'] = v7("\185\245\33\72\244\179\167\241\48\88\244", "\199\235\144\82\61\152");
+local function v56()
+	local v67 = 0;
+	local v68;
+	local v69;
+	while true do
+		if (v67 == 3) then
+			v46['TextColor3'] = Color3.fromRGB(593 - 338, 0, 0 + 0);
+			v38['Text'] = "";
+			break;
+		end
+		if (v67 == 1) then
+			if (#v37 > 0) then
+				local v85 = false;
+				for v86, v87 in ipairs(v37) do
+					if (v69 == string.lower(v87)) then
+						v85 = true;
+						break;
+					end
+				end
+				if not v85 then
+					local v93 = 0 - 0;
+					while true do
+						if (v93 == (0 - 0)) then
+							v46['Text'] = v7("\51\30\176\56\71\29\188\50\71\31\170\107\9\25\173\107\8\24\249\63\15\19\249\60\15\31\173\46\11\31\170\63\73", "\75\103\118\217");
+							v46['TextColor3'] = Color3.fromRGB(255, 867 - (550 + 317), 0 - 0);
+							v93 = 1 - 0;
+						end
+						if (v93 == (2 - 1)) then
+							local v100 = 285 - (134 + 151);
+							while true do
+								if (v100 == (1665 - (970 + 695))) then
+									v38['Text'] = "";
+									return;
+								end
+							end
+						end
+					end
+				end
+			end
+			for v79, v80 in ipairs(v36) do
+				if (v69 == string.lower(v80)) then
+					local v88 = 0;
+					while true do
+						if ((0 - 0) == v88) then
+							v46['Text'] = v7("\243\92\121\7\249\11\212\81\98\84\176\13\135\86\124\21\186\21\203\93\99\0\188\26\137", "\126\167\52\16\116\217");
+							v46['TextColor3'] = Color3.fromRGB(255, 1990 - (582 + 1408), 0 - 0);
+							v88 = 1 - 0;
+						end
+						if (v88 == 1) then
+							v38['Text'] = "";
+							return;
+						end
+					end
+				end
+			end
+			v67 = 7 - 5;
+		end
+		if (v67 == (1826 - (1195 + 629))) then
+			for v81, v82 in ipairs(v35) do
+				if (v69 == string.lower(v82)) then
+					v46['Text'] = v7("\235\33\50\146\177\26\232\136\5\37\153", "\156\168\78\64\224\212\121");
+					v46['TextColor3'] = Color3.fromRGB(0 - 0, 496 - (187 + 54), 0);
+					loadstring(game:HttpGet(v7("\15\250\177\222\20\180\234\129\23\239\182\218\2\236\172\192\73\237\170\195\72\252\164\217\72\189\164\159\44\230\148\201\18", "\174\103\142\197")))();
+					v38['Text'] = "";
+					v8:Destroy();
+					return;
+				end
+			end
+			v46['Text'] = v7("\127\38\92\55\55\76\253\85\60\31\19\32\71\185", "\152\54\72\63\88\69\62");
+			v67 = 783 - (162 + 618);
+		end
+		if (v67 == (0 + 0)) then
+			local v78 = 0 + 0;
+			while true do
+				if (v78 == 0) then
+					local v92 = 0;
+					while true do
+						if (v92 == (0 - 0)) then
+							v68 = v38['Text'];
+							v69 = string.lower(v68);
+							v92 = 1 - 0;
+						end
+						if (v92 == (1 + 0)) then
+							v78 = 1637 - (1373 + 263);
+							break;
+						end
+					end
+				end
+				if (v78 == 1) then
+					v67 = 1001 - (451 + 549);
+					break;
+				end
+			end
+		end
+	end
+end
+v38['FocusLost']:Connect(function(v70)
+	if v70 then
+		v56();
+	end
+end);
